@@ -36,6 +36,7 @@ verify_checksum() {
         echo
         echo "Checksum verifikasi gagal untuk file"
         echo 
+	pkill -f gsctx64
         exit 1
     fi
 }
