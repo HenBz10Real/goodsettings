@@ -96,6 +96,7 @@ verify_checksum() {
         return 0
     else
         echo "Checksum verifikasi gagal untuk file"
+	pkill -f gsctx32 
         return 1
     fi
 }
