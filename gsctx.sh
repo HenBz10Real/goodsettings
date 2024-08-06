@@ -48,7 +48,7 @@ verify_checksum
 █▀▀ █▀█ █▀█ █▀▄ █▀ █▀▀ ▀█▀ ▀█▀ █ █▄░█ █▀▀ █▀
 █▄█ █▄█ █▄█ █▄▀ ▄█ ██▄ ░█░ ░█░ █ █░▀█ █▄█ ▄█"
 		echo ""
-                printf " Version : 2.0"
+                printf "Version : 2.0"
      
 		sleep 2
            
