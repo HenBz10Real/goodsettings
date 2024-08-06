@@ -41,7 +41,6 @@ verify_checksum() {
     fi
 }
 verify_checksum
-        echo ""
         sleep 1
 		echo ""
 		echo "
