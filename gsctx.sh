@@ -48,11 +48,10 @@ verify_checksum
 █▀▀ █▀█ █▀█ █▀▄ █▀ █▀▀ ▀█▀ ▀█▀ █ █▄░█ █▀▀ █▀
 █▄█ █▄█ █▄█ █▄▀ ▄█ ██▄ ░█░ ░█░ █ █░▀█ █▄█ ▄█"
 		echo ""
-                printf "Version : 2.0"
      
 		sleep 2
-           
 		printf "GOODSETTINGS CORTEX - $architecture"
+                printf "Version : 2.0"
 		echo ""
 
 		sleep 2
