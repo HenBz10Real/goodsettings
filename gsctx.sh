@@ -140,3 +140,4 @@ verify_checksum
 		echx "Unknown: $architecture"
 		echo
 	fi
+        sleep 2 && rm -rf /data/local/tmp/axeron_cash/goodsettings/response>/dev/null 2>&1
