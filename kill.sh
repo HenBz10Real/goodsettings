@@ -1,4 +1,4 @@
-source $FUNCTION
+$AXFUN
 echo ""
 status=$(pgrep -f gsctx32) >/dev/null 2>&1
 if [ "$status" ]; then
