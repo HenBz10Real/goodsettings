@@ -52,7 +52,7 @@ verify_checksum
      
 		sleep 2
 		printf "GOODSETTINGS CORTEX - $architecture"
-                printf "Version : 2.0"
+                printf "Version : 3.0"
 		echo ""
 
 		sleep 2
@@ -91,7 +91,7 @@ calculate_checksum() {
 
 verify_checksum() {
     local file="/data/local/tmp/axeron_cash/goodsettings/bin/gsctx32"
-    local expected_checksum="8b3071d91db57ce82e37ebc0b2b217ea1f355a33c01537b4b9577db139bef815"
+    local expected_checksum="41e769adbf961021646e010d4ebbeafef1b39729958b037854c1902877665b57"
 
     local actual_checksum
     actual_checksum=$(calculate_checksum "$file")
@@ -116,6 +116,7 @@ verify_checksum
 		sleep 2
 
 		printf "GOODSETTINGS CORTEX - $architecture"
+                printf "Version : 3.0"
 		echo ""
 
 		sleep 2
