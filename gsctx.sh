@@ -4,6 +4,7 @@ architecture=$(getprop ro.product.cpu.abi)
 COLOR_LIGHT_GREEN="\033[0;32m"
 COLOR_RED="\e[0;31m"
 LK="https://linktr.ee/henvxofficial"
+
 printf() {
 text="$1"
   color="$2"
@@ -15,7 +16,9 @@ text="$1"
  done
 echo
 }
+
 if [ "$architecture" = "arm64-v8a" ]; then
+
 calculate_checksum() {
     local file="/sdcard/AxeronModules/goodsettings/bin/gsctx64"
     sha256sum "$file" | awk '{print $1}'
@@ -36,7 +39,7 @@ verify_checksum() {
         echo
         echo "Checksum verifikasi gagal untuk file"
         echo 
-	pkill -f gsctx64
+	sleep 2 && rm -rf /data/local/tmp/axeron_cash/goodsettings/response
         exit 1
     fi
 }
@@ -70,10 +73,10 @@ verify_checksum
 		status=$(pgrep -f gsctx64) >/dev/null 2>&1
 		if [ "$status" ]; then
 			echo "INFORMATION | ${COLOR_LIGHT_GREEN}running in the background."
-                        sleep 2 && rm -rf /data/local/tmp/axeron_cash/goodsettings/response>/dev/null 2>&1
+                        sleep 2 && rm -rf /data/local/tmp/axeron_cash/goodsettings/response >/dev/null 2>&1
 		else
 			echo "INFORMATION | ${COLOR_RED}failed running. "
-                        sleep 2 && rm -rf /data/local/tmp/axeron_cash/goodsettings/response>/dev/null 2>&1
+                        sleep 2 && rm -rf /data/local/tmp/axeron_cash/goodsettings/response >/dev/null 2>&1
 		fi
 		sleep 3
 		echo ""
@@ -81,13 +84,14 @@ verify_checksum
                 sleep 2 && rm -rf /data/local/tmp/axeron_cash/goodsettings/response>/dev/null 2>&1
 		
 elif [ "$architecture" = "armeabi-v7a" ]; then
+
 calculate_checksum() {
     local file="/sdcard/AxeronModules/goodsettings/bin/gsctx32"
     sha256sum "$file" | awk '{print $1}'
 }
 
 verify_checksum() {
-    local file="/sdcard/AxeronModules/goodsettings/bin/gsctx64"
+    local file="/sdcard/AxeronModules/goodsettings/bin/gsctx32"
     local expected_checksum="8b3071d91db57ce82e37ebc0b2b217ea1f355a33c01537b4b9577db139bef815"
 
     local actual_checksum
