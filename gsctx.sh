@@ -19,7 +19,7 @@ echo
 if [ "$architecture" = "arm64-v8a" ]; then
 
 calculate_checksum() {
-    local file="/data/local/tmp/axeron_cash/goodsettings/bin/"
+    local file="/data/local/tmp/axeron_cash/goodsettings/bin/gsctx64"
     sha256sum "$file" | awk '{print $1}'
 }
 
