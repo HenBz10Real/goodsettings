@@ -38,7 +38,7 @@ verify_checksum() {
         echo
         echo "Checksum verifikasi gagal untuk file"
         echo 
-	sleep 2 && rm -rf /data/local/tmp/axeron_cash/goodsettings/response
+	sleep 1 && rm -rf /data/local/tmp/axeron_cash/goodsettings/ >/dev/null 2>&1
         exit 1
     fi
 }
@@ -72,15 +72,15 @@ verify_checksum
 		status=$(pgrep -f gsctx64) >/dev/null 2>&1
 		if [ "$status" ]; then
 			echo "INFORMATION | ${COLOR_LIGHT_GREEN}running in the background."
-                        sleep 2 && rm -rf /data/local/tmp/axeron_cash/goodsettings/response >/dev/null 2>&1
+                        sleep 1 && rm -rf /data/local/tmp/axeron_cash/goodsettings/ >/dev/null 2>&1
 		else
 			echo "INFORMATION | ${COLOR_RED}failed running. "
-                        sleep 2 && rm -rf /data/local/tmp/axeron_cash/goodsettings/response >/dev/null 2>&1
+                        sleep 1 && rm -rf /data/local/tmp/axeron_cash/goodsettings/ >/dev/null 2>&1
 		fi
 		sleep 3
 		echo ""
 		echo ""
-                sleep 2 && rm -rf /data/local/tmp/axeron_cash/goodsettings/response>/dev/null 2>&1
+                sleep 1 && rm -rf /data/local/tmp/axeron_cash/goodsettings/ >/dev/null 2>&1
 		
 elif [ "$architecture" = "armeabi-v7a" ]; then
 
@@ -135,18 +135,18 @@ verify_checksum
 		status=$(pgrep -f gsctx32) >/dev/null 2>&1
 		if [ "$status" ]; then
 			echo "INFORMATION | ${COLOR_LIGHT_GREEN}running in the background."
-                        sleep 2 && rm -rf /data/local/tmp/axeron_cash/goodsettings/response>/dev/null 2>&1
+                        sleep 1 && rm -rf /data/local/tmp/axeron_cash/goodsettings/ >/dev/null 2>&1
 		else
 			echo "INFORMATION | ${COLOR_RED}failed running. "
-                        sleep 2 && rm -rf /data/local/tmp/axeron_cash/goodsettings/response>/dev/null 2>&1
+                        sleep 1 && rm -rf /data/local/tmp/axeron_cash/goodsettings/ >/dev/null 2>&1
 		fi
 		sleep 3
 		echo ""
 		echo ""
-                sleep 2 && rm -rf /data/local/tmp/axeron_cash/goodsettings/response>/dev/null 2>&1
+                sleep 1 && rm -rf /data/local/tmp/axeron_cash/goodsettings/ >/dev/null 2>&1
 	else
-	    echo 
-		echx "Unknown: $architecture"
+	        echo 
+		echo "Unknown: $architecture"
 		echo
+                sleep 1 && rm -rf /data/local/tmp/axeron_cash/goodsettings/ >/dev/null 2>&1
 	fi
-        sleep 2 && rm -rf /data/local/tmp/axeron_cash/goodsettings/response>/dev/null 2>&1
