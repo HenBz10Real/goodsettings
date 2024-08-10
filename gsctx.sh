@@ -1,5 +1,4 @@
 $AXFUN
-import axeron.prop
 architecture=$(getprop ro.product.cpu.abi)
 COLOR_LIGHT_GREEN="\033[0;32m"
 COLOR_RED="\e[0;31m"
@@ -20,7 +19,7 @@ echo
 if [ "$architecture" = "arm64-v8a" ]; then
 
 calculate_checksum() {
-    local file="/sdcard/AxeronModules/goodsettings/bin/gsctx64"
+    local file="/data/local/tmp/axeron_cash/goodsettings/bin/"
     sha256sum "$file" | awk '{print $1}'
 }
 
@@ -63,7 +62,7 @@ verify_checksum
 		
 		status=$(pgrep -f gsctx64) >/dev/null 2>&1
 		if [ ! "$status" ]; then
-			cp "/sdcard/AxeronModules/goodsettings/bin/gsctx64" /data/local/tmp
+			cp "/data/local/tmp/axeron_cash/goodsettings/bin/gsctx64" /data/local/tmp
 			chmod +x /data/local/tmp/gsctx64
 			nohup /data/local/tmp/gsctx64 >/dev/null 2>&1 &
 		fi
@@ -86,12 +85,12 @@ verify_checksum
 elif [ "$architecture" = "armeabi-v7a" ]; then
 
 calculate_checksum() {
-    local file="/sdcard/AxeronModules/goodsettings/bin/gsctx32"
+    local file="/data/local/tmp/axeron_cash/goodsettings/bin/gsctx32"
     sha256sum "$file" | awk '{print $1}'
 }
 
 verify_checksum() {
-    local file="/sdcard/AxeronModules/goodsettings/bin/gsctx32"
+    local file="/data/local/tmp/axeron_cash/goodsettings/bin/gsctx32"
     local expected_checksum="8b3071d91db57ce82e37ebc0b2b217ea1f355a33c01537b4b9577db139bef815"
 
     local actual_checksum
@@ -126,7 +125,7 @@ verify_checksum
 		
 		status=$(pgrep -f gsctx32) >/dev/null 2>&1
 		if [ ! "$status" ]; then
-			cp "/sdcard/AxeronModules/goodsettings/bin/gsctx32" /data/local/tmp
+			cp "/data/local/tmp/axeron_cash/goodsettings/bin/gsctx32" /data/local/tmp
 			chmod +x /data/local/tmp/gsctx32
 			nohup /data/local/tmp/gsctx32 >/dev/null 2>&1 &
 		fi
