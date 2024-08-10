@@ -1,4 +1,5 @@
 $AXFUN
+import axeron.prop
 architecture=$(getprop ro.product.cpu.abi)
 COLOR_LIGHT_GREEN="\033[0;32m"
 COLOR_RED="\e[0;31m"
