@@ -24,7 +24,7 @@ calculate_checksum() {
 }
 
 verify_checksum() {
-    local expected_checksum="cb97d4ecaf91153ff65c7111bb139bb00a78f7eedbca153edcc0d27df5f1e6f6"
+    local expected_checksum="658405d069f84dbd93cfb474bd42e6bb167ea6b559dacd32a0c1046994389e17"
 
     local actual_checksum
     actual_checksum=$(calculate_checksum "$file")
