@@ -1,4 +1,3 @@
-#!/bin/sh
 $AXFUN
 architecture=$(getprop ro.product.cpu.abi)
 COLOR_LIGHT_GREEN="\033[0;32m"
