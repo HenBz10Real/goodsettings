@@ -1,5 +1,5 @@
 #!/bin/sh
-if [ "$(basename "$0")" != "gtrx64" ]; then
+if [ "$(basename "$0")" != "gsctx" ]; then
     exit 1
 fi
 
