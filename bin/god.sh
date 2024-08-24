@@ -1,4 +1,8 @@
 #!/bin/sh
+if [ "$(basename "$0")" != "gtrx64" ]; then
+    exit 1
+fi
+
 set_priorities() {
     pid="$1"
     nice -n -5 -p "$pid" > /dev/null 2>&1
