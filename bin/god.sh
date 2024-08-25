@@ -50,7 +50,7 @@ main() {
                     sleep 1
                 done
 
-                am broadcast -a axeron.show.TOAST --es title "GS-CTRX" --es msg "SUCCESSFULLY GOODSETTINGS" --ei duration "2000"
+                am broadcast -a axeron.show.TOAST --es title "GS-CTRX" --es msg "SUCCESSFULLY GOODSETTINGS"
             fi
             prev_window_state="active"
         else
