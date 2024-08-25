@@ -1,11 +1,11 @@
 $AXFUN
 echo ""
-status=$(pgrep -f gsctx) >/dev/null 2>&1
+status=$(pgrep -f good) >/dev/null 2>&1
 if [ "$status" ]; then
-  pkill -f gsctx
+  pkill -f good
 fi
 
-status=$(pgrep -f gsctx) >/dev/null 2>&1
+status=$(pgrep -f good) >/dev/null 2>&1
 if [ ! "$status" ]; then
   echo ""
   echo " Goodsettings stopped in background."
