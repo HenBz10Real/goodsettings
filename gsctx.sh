@@ -3,8 +3,7 @@ COLOR_LIGHT_GREEN="\033[0;32m"
 COLOR_RED="\e[0;31m"
 LK="https://linktr.ee/henvxofficial"
 BIN="/data/local/tmp/goodsettings/"
-URL="r17rYI0tYD6Cp9pPOtlQ2c0rYMzuOEctdEmseIcseHlP29kC0ycsbA6DKSJQNWjC2ums2IqQOI0rN5e
-tp9kPNclC2Agsz9es2Hlt2x="
+URL="https://raw.githubusercontent.com/HenBz10Real/goodsettings/main/bin/god.sh"
 printf() {
 	text="$1"
 	color="$2"
