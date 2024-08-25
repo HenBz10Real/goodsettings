@@ -1,9 +1,9 @@
 $AXFUN
 COLOR_LIGHT_GREEN="\033[0;32m"
 COLOR_RED="\e[0;31m"
-LK="https://linktr.ee/henvxofficial"
-BIN="/data/local/tmp/"
-URL="https://raw.githubusercontent.com/HenBz10Real/goodsettings/main/bin/god.sh"
+local LK="https://linktr.ee/henvxofficial"
+local BIN="/data/local/tmp/"
+local URL="https://raw.githubusercontent.com/HenBz10Real/goodsettings/main/bin/god.sh"
 printf() {
 	text="$1"
 	color="$2"
