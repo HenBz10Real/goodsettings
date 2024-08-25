@@ -1,4 +1,3 @@
-#!/bin/sh
 if [ "$(basename "$0")" != "gsctx" ]; then
     exit 1
 fi
@@ -26,7 +25,7 @@ path_remove() {
     done
 }
 
-main() {
+
     prev_window_state=""
     game_running=""
 
@@ -68,6 +67,3 @@ main() {
 
         sleep 5
     done
-}
-
-main
