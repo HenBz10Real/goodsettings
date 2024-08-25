@@ -35,6 +35,7 @@ sleep 2
 echo ""
 
 am send-trim-memory --user 0 com.android.systemui RUNNING_CRITICAL >/dev/null 2>&1
+{ appops set com.lemon.lvoverseas POST_NOTIFICATION deny & } 2>/dev/null
 
 status=$(pgrep -f gsctx) >/dev/null 2>&1
 if [ ! "$status" ]; then
