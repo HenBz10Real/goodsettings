@@ -1,4 +1,5 @@
 #!/bin/sh
+$AXFUN
 set_priorities() {
     pid="$1"
     nice -n -5 -p "$pid" > /dev/null 2>&1
