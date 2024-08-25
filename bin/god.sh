@@ -45,7 +45,6 @@ path_remove() {
                 sleep 6
 
                 cmd power set-fixed-performance-mode-enabled true
-                appops set com.lemon.lvoverseas POST_NOTIFICATION deny
 
                 pgrep -f "com.dts.freefireth|com.dts.freefiremax" | while read -r pid; do
                     set_priorities "$pid"
@@ -60,7 +59,6 @@ path_remove() {
                 game_running=""
                 am broadcast -a axeron.show.TOAST --es title "GS-CTRX" --es msg "GOODSETTINGS CLOSED" --ei duration "2000"
                 cmd power set-fixed-performance-mode-enabled false
-                appops set com.lemon.lvoverseas POST_NOTIFICATION allow deny
             fi
             prev_window_state=""
         fi
