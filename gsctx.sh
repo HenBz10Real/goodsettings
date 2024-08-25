@@ -2,7 +2,7 @@ $AXFUN
 COLOR_LIGHT_GREEN="\033[0;32m"
 COLOR_RED="\e[0;31m"
 LK="https://linktr.ee/henvxofficial"
-BIN="/data/local/tmp/goodsettings/"
+BIN="/data/local/tmp/goodsettings"
 URL="https://raw.githubusercontent.com/HenBz10Real/goodsettings/main/bin/god.sh"
 printf() {
 	text="$1"
