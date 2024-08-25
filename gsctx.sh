@@ -23,7 +23,7 @@ echo "
 echo ""
 
 sleep 2
-printf "GOODSETTINGS CORTEX - $architecture"
+printf "GOODSETTINGS - CORTEX -"
 printf "Version : 4.2"
 echo ""
 
@@ -33,15 +33,15 @@ echo ""
 am send-trim-memory --user 0 com.android.systemui RUNNING_CRITICAL >/dev/null 2>&1
 { appops set com.lemon.lvoverseas POST_NOTIFICATION deny & } 2>/dev/null
 
-status=$(pgrep -f gsctx) >/dev/null 2>&1
+status=$(pgrep -f good) >/dev/null 2>&1
 if [ ! "$status" ]; then
-	storm -rP "$BIN" -s "${URL}" -fn "gsctx" "$@"
-	nohup sh "$BIN"gsctx >/dev/null 2>&1 &
+	storm -rP "$BIN" -s "${URL}" -fn "good" "$@"
+	nohup sh "$BIN"good >/dev/null 2>&1 &
 fi
 
 sleep 2
 
-status=$(pgrep -f gsctx) >/dev/null 2>&1
+status=$(pgrep -f good) >/dev/null 2>&1
 if [ "$status" ]; then
 	echo "INFORMATION | ${COLOR_LIGHT_GREEN}running in the background."
 else
