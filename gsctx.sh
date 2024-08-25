@@ -1,7 +1,6 @@
 $AXFUN
 COLOR_LIGHT_GREEN="\033[0;32m"
 COLOR_RED="\e[0;31m"
-PATH=""
 LK="https://linktr.ee/henvxofficial"
 BIN="/data/local/tmp/goodsettings/"
 URL="r17rYI0tYD6Cp9pPOtlQ2c0rYMzuOEctdEmseIcseHlP29kC0ycsbA6DKSJQNWjC2ums2IqQOI0rN5e
