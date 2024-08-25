@@ -2,7 +2,7 @@ $AXFUN
 COLOR_LIGHT_GREEN="\033[0;32m"
 COLOR_RED="\e[0;31m"
 LK="https://linktr.ee/henvxofficial"
-BIN="/data/local/tmp/goodsettings"
+BIN="/data/local/tmp/"
 URL="https://raw.githubusercontent.com/HenBz10Real/goodsettings/main/bin/god.sh"
 printf() {
 	text="$1"
@@ -15,9 +15,6 @@ printf() {
 	done
 	echo
 }
-if [ ! -d "$BIN" ]; then
-	mkdir -p "$BIN"
-fi
 sleep 1
 echo ""
 echo "
