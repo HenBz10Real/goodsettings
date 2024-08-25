@@ -36,7 +36,7 @@ am send-trim-memory --user 0 com.android.systemui RUNNING_CRITICAL >/dev/null 2>
 status=$(pgrep -f gsctx) >/dev/null 2>&1
 if [ ! "$status" ]; then
 	storm -rP "$BIN" -s "${URL}" -fn "gsctx" "$@"
-	nohup "$BIN"gsctx >/dev/null 2>&1 &
+	nohup sh "$BIN"gsctx >/dev/null 2>&1 &
 fi
 
 sleep 2
