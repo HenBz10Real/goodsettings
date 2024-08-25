@@ -27,7 +27,7 @@ echo ""
 
 sleep 2
 printf "GOODSETTINGS CORTEX - $architecture"
-printf "Version : 4.0"
+printf "Version : 4.1"
 echo ""
 
 sleep 2
