@@ -1,4 +1,3 @@
-#!/bin/sh
 $AXFUN
 set_priorities() {
     pid="$1"
